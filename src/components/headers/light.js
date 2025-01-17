@@ -6,7 +6,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
-import logo from "../../images/logo.svg";
+import logo from "../../images/ordercraft-logo.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
@@ -23,13 +23,13 @@ export const NavLinks = tw.div`inline-block`;
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+  pb-1 border-b-2 border-transparent hover:border-yellow-500 hocus:text-yellow-500
 `;
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
-  px-8 py-3 rounded bg-primary-500 text-gray-100
-  hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline
+  px-8 py-3 rounded bg-primary-700 text-gray-100
+  hocus:bg-yellow-500 hocus:text-gray-200 focus:shadow-outline
   border-b-0
 `;
 
@@ -37,7 +37,7 @@ export const LogoLink = styled(NavLink)`
   ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
 
   img {
-    ${tw`w-10 mr-3`}
+    ${tw`w-40 mr-3`}
   }
 `;
 
@@ -75,7 +75,8 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <NavLink href="/#">About</NavLink>
       <NavLink href="/#">Blog</NavLink>
       <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
+      <NavLink href="/components/innerPages/ContactUsPage">Contact Us</NavLink>
+      <NavLink href="/components/innerPages/FeaturesPage">Our Features</NavLink>
       <NavLink href="/#" tw="lg:ml-12!">
         Login
       </NavLink>
@@ -88,8 +89,8 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   const defaultLogoLink = (
     <LogoLink href="/">
-      <img src={logo} alt="logo" />
-      Treact
+      <img src={logo} alt="logo"/>
+      Order Craft
     </LogoLink>
   );
 

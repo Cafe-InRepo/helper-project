@@ -9,7 +9,7 @@ import ContactDetails from "components/cards/ThreeColContactDetails.js";
 
 const Address = tw.span`leading-relaxed`;
 const AddressLine = tw.span`block`;
-const Email = tw.span`text-sm mt-6 block text-gray-500`;
+const Email = tw.span`text-sm mt-6 block text-yellow-500`;
 const Phone = tw.span`text-sm mt-0 block text-gray-500`;
 
 export default () => {

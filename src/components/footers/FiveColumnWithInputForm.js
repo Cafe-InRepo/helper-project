@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 
-import LogoImage from "images/logo.svg";
+import LogoImage from "images/ordercraft-logo.png";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
@@ -19,7 +19,7 @@ const ColumnHeading = tw.h5`uppercase font-bold`;
 
 const LinkList = tw.ul`mt-6 text-sm font-medium`;
 const LinkListItem = tw.li`mt-3`;
-const Link = tw.a`border-b-2 border-transparent hocus:border-gray-700 pb-1 transition duration-300`;
+const Link = tw.a`border-b-2 border-transparent hocus:border-yellow-500 pb-1 transition duration-300`;
 
 const SubscribeNewsletterColumn = tw(Column)`text-center lg:text-left w-full! lg:w-auto! mt-20 lg:mt-12`;
 const SubscribeNewsletterContainer = tw.div`max-w-sm mx-auto lg:mx-0 `;
@@ -40,7 +40,7 @@ const CopywrightNotice = tw.p`text-center text-sm sm:text-base mt-8 md:mt-0 font
 
 const SocialLinksContainer = tw.div`mt-8 md:mt-0 flex`;
 const SocialLink = styled.a`
-  ${tw`cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0`}
+  ${tw`cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-yellow-600 transition duration-300 mr-4 last:mr-0`}
   svg {
     ${tw`w-4 h-4`}
   }
@@ -135,10 +135,10 @@ export default () => {
         <Divider />
         <ThreeColRow>
           <LogoContainer>
-            <LogoImg src={LogoImage} />
-            <LogoText>Treact Inc.</LogoText>
+            <LogoImg src={LogoImage} alt="Order Craft" style={{ width: "100px" }} />
+            <LogoText>Order Craft Inc.</LogoText>
           </LogoContainer>
-          <CopywrightNotice>&copy; 2018 Treact Inc. All Rights Reserved.</CopywrightNotice>
+          <CopywrightNotice>&copy; 2024 Order Craft Inc. All Rights Reserved.</CopywrightNotice>
           <SocialLinksContainer>
             <SocialLink href="https://facebook.com">
               <FacebookIcon />
