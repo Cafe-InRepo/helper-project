@@ -1,5 +1,5 @@
 import React from "react";
-import GlobalStyles from 'styles/GlobalStyles';
+import GlobalStyles from "styles/GlobalStyles";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
 /*
@@ -86,7 +86,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
 // import AgencyLandingPage from "demos/AgencyLandingPage.js";
 // import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
- import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
+//import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
 // import ServiceLandingPage from "demos/ServiceLandingPage.js";
 // import HostingCloudLandingPage from "demos/HostingCloudLandingPage.js";
 
@@ -96,14 +96,17 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import PricingPage from "pages/Pricing.js";
 import AboutUsPage from "pages/AboutUs.js";
 import Pricing from "./pages/Pricing";
+import Blog from "./pages/BlogIndex";
+import Contact from "./pages/ContactUs";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
 
 // import ContactUsPage from "pages/ContactUs.js";
 // import BlogIndexPage from "pages/BlogIndex.js";
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 
-import ComponentRenderer from "ComponentRenderer.js";
-import MainLandingPage from "MainLandingPage.js";
 import ThankYouPage from "ThankYouPage.js";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -113,20 +116,23 @@ export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
 
-
   return (
     <>
       <GlobalStyles />
       <Router>
         <Routes>
-          <Route path="/components/:type/:subtype/:name" element={<ComponentRenderer />} />
+          
           {/* <Route path="/" element={<RestaurantLandingPage />} /> */}
           <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/" element={<AboutUsPage />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/features" element={<Features />} />
-          <Route path="/components/:type/:name" element={<ComponentRenderer />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+
           <Route path="/thank-you" element={<ThankYouPage />} />
-          <Route path="/" element={<MainLandingPage />} />
         </Routes>
       </Router>
     </>

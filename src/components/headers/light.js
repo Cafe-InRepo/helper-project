@@ -79,14 +79,15 @@ export default ({
   const defaultLinks = [
     <NavLinks key={1}>
       <NavLink href="/about">About</NavLink>
-      <NavLink href="/components/innerPages/BlogIndexPage">Blog</NavLink>
+      <NavLink href="/blog">Blog</NavLink>
       <NavLink href="/pricing">Pricing</NavLink>
-      <NavLink href="/components/innerPages/ContactUsPage">Contact Us</NavLink>
+      <NavLink href="/contact">Contact Us</NavLink>
       <NavLink href="/features">Features</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
+
+      <NavLink href="/login" tw="lg:ml-12!">
         Login
       </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/signup">
         Sign Up
       </PrimaryLink>
     </NavLinks>,

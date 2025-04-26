@@ -69,7 +69,7 @@ export default ({
           icon: LinkedinIcon,
         },
         {
-          url: "https://github.com",
+          url: "https://www.facebook.com/profile.php?id=100008384925938",
           icon: FacebookIcon,
         },
       ],
@@ -88,7 +88,7 @@ export default ({
           icon: LinkedinIcon,
         },
         {
-          url: "https://github.com",
+          url: "https://www.facebook.com/dycard.shigaraki.9",
           icon: FacebookIcon,
         },
       ],
@@ -107,7 +107,7 @@ export default ({
           icon: LinkedinIcon,
         },
         {
-          url: "https://github.com",
+          url: "https://www.facebook.com/gaith.nasri.169",
           icon: FacebookIcon,
         },
       ],
