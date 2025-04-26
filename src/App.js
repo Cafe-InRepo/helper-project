@@ -86,7 +86,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
 // import AgencyLandingPage from "demos/AgencyLandingPage.js";
 // import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
-// import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
+ import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
 // import ServiceLandingPage from "demos/ServiceLandingPage.js";
 // import HostingCloudLandingPage from "demos/HostingCloudLandingPage.js";
 
@@ -94,7 +94,9 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import LoginPage from "pages/Login.js";
 // import SignupPage from "pages/Signup.js";
 // import PricingPage from "pages/Pricing.js";
-// import AboutUsPage from "pages/AboutUs.js";
+import AboutUsPage from "pages/AboutUs.js";
+import Pricing from "./pages/Pricing";
+
 // import ContactUsPage from "pages/ContactUs.js";
 // import BlogIndexPage from "pages/BlogIndex.js";
 // import TermsOfServicePage from "pages/TermsOfService.js";
@@ -105,6 +107,7 @@ import MainLandingPage from "MainLandingPage.js";
 import ThankYouPage from "ThankYouPage.js";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Features from "pages/Features";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
@@ -117,6 +120,10 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/components/:type/:subtype/:name" element={<ComponentRenderer />} />
+          {/* <Route path="/" element={<RestaurantLandingPage />} /> */}
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/features" element={<Features />} />
           <Route path="/components/:type/:name" element={<ComponentRenderer />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/" element={<MainLandingPage />} />

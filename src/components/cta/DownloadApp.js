@@ -35,9 +35,9 @@ const DecoratorBlobContainer = tw.div`absolute inset-0 overflow-hidden rounded-l
 const DecoratorBlob1 = tw(SvgDecoratorBlob1)`absolute bottom-0 left-0 w-80 h-80 transform -translate-x-20 translate-y-32 text-gray-800 opacity-50`
 const DecoratorBlob2 = tw(SvgDecoratorBlob1)`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-gray-800 opacity-50`
 export default ({
-  subheading = "Download App",
+  subheading = "Visit Our Clients",
   text = "Developers all over the world are happily using Treact.",
-  link1Text = "App Store",
+  link1Text = "Our Clients",
   link1Url = "http://apple.com",
   link1IconSrc = appleIconImageSrc,
   link2Text = "Google Play",
@@ -55,13 +55,13 @@ export default ({
             <Text>{text}</Text>
             <LinksContainer>
               <Link href={link1Url}>
-                <img src={link1IconSrc} alt=""/>
+                {/* <img src={link1IconSrc} alt=""/> */}
                 <span>{link1Text}</span>
               </Link>
-              <Link href={link2Url}>
+              {/* <Link href={link2Url}>
                 <img src={link2IconSrc} alt=""/>
                 <span>{link2Text}</span>
-              </Link>
+              </Link> */}
             </LinksContainer>
           </TextContainer>
           <ImageContainer>

@@ -14,7 +14,7 @@ const Heading = tw(SectionHeading)`text-gray-900`;
 const Posts = tw.div`mt-6 sm:-mr-8 flex flex-wrap`;
 const PostContainer = styled.div`
   ${tw`mt-10 w-full sm:w-1/2 lg:w-1/3 sm:pr-8`}
-  ${props =>
+  ${(props) =>
     props.featured &&
     css`
       ${tw`w-full!`}
@@ -34,7 +34,10 @@ const PostContainer = styled.div`
 `;
 const Post = tw.div`cursor-pointer flex flex-col bg-gray-100 rounded-lg`;
 const Image = styled.div`
-  ${props => css`background-image: url("${props.imageSrc}");`}
+  ${(props) =>
+    css`
+      background-image: url("${props.imageSrc}");
+    `}
   ${tw`h-64 w-full bg-cover bg-center rounded-t-lg`}
 `;
 const Info = tw.div`p-8 border-2 border-t-0 rounded-lg rounded-t-none`;
@@ -51,38 +54,70 @@ export default ({
   posts = [
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
-      category: "Travel Tips",
-      date: "April 21, 2020",
-      title: "Safely Travel in Foreign Countries",
+        "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1024&q=80",
+      category: "Product Update",
+      date: "April 20, 2025",
+      title: "New Features to Supercharge Your Restaurant Operations",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      url: "https://timerse.com",
-      featured: true
+        "Discover the latest updates to OrderCraft: table management, real-time order tracking, and AI-driven menu suggestions designed to make your workflow smoother than ever.",
+      url: "#", // You can replace "#" with a real link
+      featured: true,
     },
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost()
-  ]
+    {
+      imageSrc:
+        "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=1024&q=80",
+      category: "Tips & Tricks",
+      date: "April 18, 2025",
+      title: "5 Tips to Speed Up Your Coffee Shop Orders with OrderCraft",
+      description:
+        "Learn how simple tweaks inside OrderCraft can reduce wait times and boost customer satisfaction in your coffee shop or café.",
+      url: "#",
+    },
+    {
+      imageSrc:
+        "https://images.unsplash.com/photo-1544148105-0b74482b3c1e?auto=format&fit=crop&w=1024&q=80",
+      category: "Success Story",
+      date: "April 15, 2025",
+      title: "How Café Bloom Increased Revenue by 35% Using OrderCraft",
+      description:
+        "Read how a local café transformed their operations and improved customer loyalty with smart order management and online promotions through OrderCraft.",
+      url: "#",
+    },
+    {
+      imageSrc:
+        "https://images.unsplash.com/photo-1542444459-db63c36a8d99?auto=format&fit=crop&w=1024&q=80",
+      category: "Industry Insights",
+      date: "April 10, 2025",
+      title: "Top 5 Trends in Restaurant Technology for 2025",
+      description:
+        "Stay ahead of the curve by learning about self-service kiosks, AI-powered recommendations, loyalty programs, and how OrderCraft supports these trends.",
+      url: "#",
+    },
+    {
+      imageSrc:
+        "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1024&q=80",
+      category: "How-To",
+      date: "April 5, 2025",
+      title: "Setting Up Your Online Menu in Less Than 15 Minutes",
+      description:
+        "A step-by-step guide to setting up your digital menu with OrderCraft — no coding, no headaches, just beautiful results.",
+      url: "#",
+    },
+    {
+      imageSrc:
+        "https://images.unsplash.com/photo-1564675671004-c7b1af13d72b?auto=format&fit=crop&w=1024&q=80",
+      category: "Announcements",
+      date: "April 2, 2025",
+      title: "OrderCraft Now Integrates with Delivery Apps!",
+      description:
+        "Manage orders from UberEats, DoorDash, and more directly inside OrderCraft. Learn how to activate integrations and maximize your delivery sales.",
+      url: "#",
+    },
+  ],
 }) => {
   const [visible, setVisible] = useState(7);
   const onLoadMoreClick = () => {
-    setVisible(v => v + 6);
+    setVisible((v) => v + 6);
   };
   return (
     <AnimationRevealPage>
@@ -101,7 +136,9 @@ export default ({
                     <Category>{post.category}</Category>
                     <CreationDate>{post.date}</CreationDate>
                     <Title>{post.title}</Title>
-                    {post.featured && post.description && <Description>{post.description}</Description>}
+                    {post.featured && post.description && (
+                      <Description>{post.description}</Description>
+                    )}
                   </Info>
                 </Post>
               </PostContainer>
@@ -109,7 +146,9 @@ export default ({
           </Posts>
           {visible < posts.length && (
             <ButtonContainer>
-              <LoadMoreButton onClick={onLoadMoreClick}>Load More</LoadMoreButton>
+              <LoadMoreButton onClick={onLoadMoreClick}>
+                Load More
+              </LoadMoreButton>
             </ButtonContainer>
           )}
         </ContentWithPaddingXl>
@@ -119,13 +158,13 @@ export default ({
   );
 };
 
-const getPlaceholderPost = () => ({
-  imageSrc:
-    "https://images.unsplash.com/photo-1418854982207-12f710b74003?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
-  category: "Travel Guide",
-  date: "April 19, 2020",
-  title: "Visit the beautiful Alps in Switzerland",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  url: "https://reddit.com"
-});
+// const getPlaceholderPost = () => ({
+//   imageSrc:
+//     "https://images.unsplash.com/photo-1418854982207-12f710b74003?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+//   category: "Travel Guide",
+//   date: "April 19, 2020",
+//   title: "Visit the beautiful Alps in Switzerland",
+//   description:
+//     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//   url: "https://reddit.com",
+// });

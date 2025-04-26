@@ -95,6 +95,7 @@ export default ({
             <IllustrationContainer>
               <img
                 css={imageCss}
+                style={{maxHeight:"600px"}}
                 src={imageSrc}
                 alt="Hero"
               />

@@ -4,7 +4,10 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
+// import TeamIllustrationSrc from "images/team-illustration-2.svg";
+import MainOc from "../../images/features/OC-global.png";
+
+
 import {ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
 
 const Container = tw.div`relative`;
@@ -20,6 +23,7 @@ const Image = styled.img(props => [
   props.imageRounded && tw`rounded`,
   props.imageBorder && tw`border`,
   props.imageShadow && tw`shadow`,
+  tw`max-h-[500px] `
 ]);
 
 const DecoratorBlob = styled(SvgDotPattern)(props => [
@@ -47,10 +51,10 @@ export default ({
       Designed & Developed by <span tw="text-primary-500">Professionals.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "We envision a world where restaurant and café operations are fully digitized, reducing manual workload while enhancing service speed, accuracy, and customer satisfaction. Our goal is to become the go-to platform for food establishments, including coffee shops and restaurants, seeking innovation and efficiency.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
-  imageSrc = TeamIllustrationSrc,
+  imageSrc = MainOc,
   buttonRounded = true,
   imageRounded = true,
   imageBorder = false,

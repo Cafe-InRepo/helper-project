@@ -28,24 +28,24 @@ export default ({
   testimonials = [
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
+        "https://lh5.googleusercontent.com/p/AF1QipPTpuLekKbtR3XEHuIKN98Vua2VwSDfpnYtV2ig=w203-h118",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Charlotte Hale"
+        "Order Craft has completely transformed how we handle orders in our café! Customers love the convenience of scanning a QR code to order, and our staff now spends less time running back and forth. Sales have increased, and service is much faster. Highly recommended!",
+      customerName: "The Diesel"
     },
     {
       imageSrc:
-        "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
+        "https://lh5.googleusercontent.com/p/AF1QipM1neCB_B3Lh7VolhHPZwQpVI82Jg5Ya6_CflFf=w203-h203",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Adam Cuppy"
+        "As a restaurant manager, Order Craft has made my job so much easier. I can track all orders in real-time, manage tables efficiently, and even get detailed sales reports. It’s a game-changer for our business!",
+      customerName: "Felhi Food"
     },
     {
       imageSrc:
         "https://images.unsplash.com/photo-1580852300654-03c803a14e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4.25&w=512&h=512&q=80",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Steven Marcetti"
+        "I had the smoothest experience using Order Craft at my favorite restaurant. No waiting for a waiter, no misunderstandings with my order—just scanned, selected, and paid from my phone. It’s super easy to use and makes dining out more enjoyable!",
+      customerName: "Sabri Slougui"
     }
   ]
 }) => {

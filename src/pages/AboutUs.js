@@ -11,10 +11,12 @@ import MainFeature1 from "components/features/TwoColWithButton.js";
 import Features from "components/features/ThreeColSimple.js";
 // import Features from "components/features/ThreeColWithSideImage.js";
 import TeamCardGrid from "components/cards/ProfileThreeColGrid.js";
+import Vision from "../images/about-us/vision.jpeg";
 
 import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";
 import CustomerLoveIconImage from "images/simple-icon.svg";
+import ReliableIconImage from "images/reliable-icon.svg";
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
@@ -22,46 +24,61 @@ export default () => {
     <AnimationRevealPage>
       <Header />
       <MainFeature1
-        subheading={<Subheading>About Treact</Subheading>}
-        heading="We are a modern design agency."
+        subheading={<Subheading>Who We Are</Subheading>}
+        heading="A cutting-edge web-based application."
         buttonRounded={false}
         primaryButtonText="See Portfolio"
-        imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+        // imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
       />
       <MainFeature1
         subheading={<Subheading>Our Vision</Subheading>}
-        heading="We aim to disrupt the design space."
+        heading="We envision a world where restaurant are fully digitized."
         buttonRounded={false}
         primaryButtonText="Contact Us"
-        imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
+        imageSrc={Vision}
         textOnLeft={false}
+      />
+      <MainFeature1
+        subheading={<Subheading>Our Mission</Subheading>}
+        heading="Empower with smart, intuitive, and user-friendly tools."
+        buttonRounded={false}
+        description="At Order Craft, our mission is to empower restaurant and café owners with smart, intuitive, and user-friendly tools that simplify daily tasks. We aim to create a contactless, modern dining experience that benefits both businesses and their customers."
+        primaryButtonText="See Portfolio"
+        // imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
       />
       <Features
         subheading={<Subheading>Our Values</Subheading>}
-        heading="We follow these."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        heading="Why Choose Order Craft?"
+        description="Be part of the future of digital dining! Whether you're a small café or a large restaurant, Order Craft is here to transform your business. 🚀"
         cards={[
           {
             imageSrc: SupportIconImage,
-            title: "24/7 Support",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
+            title: "Seamless Ordering Experience",
+            description:
+              "Customers can scan a QR code, explore the menu, place orders, and even make payments—all from their smartphones.",
           },
           {
             imageSrc: ShieldIconImage,
-            title: "Strong Teams",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
+            title: "Effortless Management",
+            description:
+              "From tracking sales to managing waiters, Order Craft offers powerful features for business owners.",
           },
           {
             imageSrc: CustomerLoveIconImage,
-            title: "Customer Satisfaction",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
+            title: "Enhanced Customer Satisfaction",
+            description:
+              "Faster service, easy reordering, and digital payments lead to a smooth dining experience.",
+          },
+          {
+            imageSrc: ReliableIconImage,
+            title: "Real-Time Insights",
+            description:
+              "Get data-driven analytics to improve menu performance, sales strategies, and overall business operations.",
           },
         ]}
         linkText=""
       />
-      <TeamCardGrid 
-        subheading={<Subheading>Our Team</Subheading>}
-      />
+      <TeamCardGrid subheading={<Subheading>Our Team</Subheading>} />
       <Footer />
     </AnimationRevealPage>
   );

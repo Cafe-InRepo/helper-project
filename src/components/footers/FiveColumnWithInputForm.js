@@ -140,7 +140,7 @@ export default () => {
           </LogoContainer>
           <CopywrightNotice>&copy; 2024 Order Craft Inc. All Rights Reserved.</CopywrightNotice>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
+            <SocialLink href="https://www.facebook.com/people/Order-Craft/61573793650570/">
               <FacebookIcon />
             </SocialLink>
             <SocialLink href="https://twitter.com">
