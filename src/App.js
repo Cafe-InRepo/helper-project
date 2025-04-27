@@ -101,7 +101,6 @@ import Contact from "./pages/ContactUs";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
-
 // import ContactUsPage from "pages/ContactUs.js";
 // import BlogIndexPage from "pages/BlogIndex.js";
 // import TermsOfServicePage from "pages/TermsOfService.js";
@@ -111,6 +110,7 @@ import ThankYouPage from "ThankYouPage.js";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Features from "pages/Features";
+import Landing from "pages/Landing";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
@@ -121,10 +121,9 @@ export default function App() {
       <GlobalStyles />
       <Router>
         <Routes>
-          
           {/* <Route path="/" element={<RestaurantLandingPage />} /> */}
           <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/" element={<AboutUsPage />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/features" element={<Features />} />
           <Route path="/blog" element={<Blog />} />

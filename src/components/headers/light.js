@@ -9,6 +9,7 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import logo from "../../images/ordercraft-logo.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import { useLocation } from "react-router-dom";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -16,15 +17,21 @@ const Header = tw.header`
 `;
 
 export const NavLinks = tw.div`inline-block`;
+export const NavLink = styled.a(({ active }) => [
+  tw`text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+     font-semibold tracking-wide transition duration-300
+     pb-1 border-b-2 border-transparent hocus:border-yellow-500 hocus:text-yellow-500`,
+  active && tw`border-yellow-500 text-yellow-500`,
+]);
 
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
-export const NavLink = tw.a`
-  text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
-  font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-yellow-500 hocus:text-yellow-500
-`;
+// export const NavLink = tw.a`
+//   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+//   font-semibold tracking-wide transition duration-300
+//   pb-1 border-b-2 border-transparent hover:border-yellow-500 hocus:text-yellow-500
+// `;
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
@@ -76,18 +83,36 @@ export default ({
    * changing the defaultLinks variable below below.
    * If you manipulate links here, all the styling on the links is already done for you. If you pass links yourself though, you are responsible for styling the links or use the helper styled components that are defined here (NavLink)
    */
+  const location = useLocation();
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/about">About</NavLink>
-      <NavLink href="/blog">Blog</NavLink>
-      <NavLink href="/pricing">Pricing</NavLink>
-      <NavLink href="/contact">Contact Us</NavLink>
-      <NavLink href="/features">Features</NavLink>
+      <NavLink href="/" active={location.pathname === "/"}>
+        Home
+      </NavLink>
+      <NavLink href="/about" active={location.pathname === "/about"}>
+        About
+      </NavLink>
+      <NavLink href="/blog" active={location.pathname === "/blog"}>
+        Blog
+      </NavLink>
+      <NavLink href="/features" active={location.pathname === "/features"}>
+        Features
+      </NavLink>
+      <NavLink href="/pricing" active={location.pathname === "/pricing"}>
+        Pricing
+      </NavLink>
+      <NavLink href="/contact" active={location.pathname === "/contact"}>
+        Contact Us
+      </NavLink>
 
-      <NavLink href="/login" tw="lg:ml-12!">
+      <NavLink
+        href="/login"
+        active={location.pathname === "/login"}
+        tw="lg:ml-12!"
+      >
         Login
       </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/signup">
+      <PrimaryLink href="/signup" css={roundedHeaderButton && tw`rounded-full`}>
         Sign Up
       </PrimaryLink>
     </NavLinks>,

@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/helpers": "^7.27.0",
+    "@babel/runtime": "^7.27.0",
     "feather-icons": "^4.29.0",
     "framer-motion": "^7.3.2",
+    "http-proxy-middleware": "^3.0.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-github-btn": "^1.4.0",
