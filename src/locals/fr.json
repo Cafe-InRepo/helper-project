@@ -1,0 +1,413 @@
+{
+  "landingPage": {
+    "hero": {
+      "title": "Présentation d'OrderCraft",
+      "subtitle": "Révolutionner la gestion des restaurants.",
+      "description": "Simplifiez les opérations, améliorez l'expérience client et stimulez la croissance avec notre plateforme de commande intelligente tout-en-un.",
+      "getStarted": "Commencer"
+    },
+    "problem": {
+      "title": "Le problème",
+      "description": "Les opérations des restaurants traditionnels sont lentes, sujettes aux erreurs et coûteuses.",
+      "details": "La prise de commandes manuelle, les menus papier et les processus obsolètes frustrent le personnel et les clients. Il est temps de changer.",
+      "cta": "Voir comment nous aidons"
+    },
+    "solution": {
+      "title": "La solution",
+      "description": "OrderCraft amène votre restaurant dans l'ère numérique",
+      "details": "Permettez aux clients de commander et de payer depuis leurs téléphones, simplifiez les opérations et débloquez des insights en temps réel — tout depuis une plateforme puissante.",
+      "cta": "Commencez dès aujourd'hui"
+    },
+    "features": {
+      "title": "Fonctionnalités",
+      "subtitle": "Intelligente, rapide et conviviale.",
+      "description": "OrderCraft vous fournit tout ce dont vous avez besoin pour offrir une expérience de restauration moderne.",
+      "list": {
+        "contactlessOrdering": {
+          "title": "Commande sans contact",
+          "description": "Permettez aux invités de consulter le menu, de passer des commandes et de payer directement depuis leurs smartphones."
+        },
+        "tableWaiterManagement": {
+          "title": "Gestion des tables et des serveurs",
+          "description": "Assignez des tables, suivez les temps de service et optimisez la productivité du personnel en toute simplicité."
+        },
+        "realTimeMenuControl": {
+          "title": "Contrôle du menu en temps réel",
+          "description": "Mettez facilement à jour les prix, la disponibilité et les promotions en temps réel avec notre tableau de bord intuitif."
+        },
+        "dataDrivenInsights": {
+          "title": "Insights basés sur les données",
+          "description": "Analysez les tendances de vente, les préférences des clients et optimisez vos décisions commerciales."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "subtitle": "3 étapes simples",
+      "steps": {
+        "signupSetup": {
+          "title": "Inscrivez-vous et configurez",
+          "description": "Créez votre profil de restaurant, téléchargez votre menu et personnalisez les paramètres."
+        },
+        "launchMenu": {
+          "title": "Lancez votre menu numérique",
+          "description": "Affichez des QR codes sur les tables, permettant aux invités de commencer à commander immédiatement."
+        },
+        "manageGrow": {
+          "title": "Gérez et développez",
+          "description": "Suivez les commandes, analysez les performances et développez votre entreprise en toute simplicité."
+        }
+      }
+    },
+    "trustedBy": {
+      "title": "De confiance par les restaurants",
+      "description": "Rejoignez plus de 200 restaurants qui adoptent l'avenir",
+      "details": "Des cafés conviviaux aux restaurants animés, des entreprises à travers le pays font confiance à OrderCraft pour offrir une expérience de restauration sans faille.",
+      "cta": "Devenir partenaire"
+    }
+  },
+  "contactPage": {
+    "form": {
+      "subheading": "Contactez-nous",
+      "heading": "N'hésitez pas à nous contacter.",
+      "description": "Vous avez une question, une suggestion ou besoin de support ? Nous sommes toujours prêts à vous aider. Remplissez le formulaire et nous vous répondrons dès que possible.",
+      "submitButtonText": "Envoyer le message"
+    },
+    "details": {
+      "subheading": "Notre localisation",
+      "heading": "Venez nous rendre visite",
+      "description": "Vous êtes toujours les bienvenus dans notre bureau. N'hésitez pas à appeler, envoyer un e-mail ou nous rendre visite pendant nos horaires d'ouverture.",
+      "cards": [
+        {
+          "city": "El Ayoun, Kasserine",
+          "addressLine1": "El Ayoun City",
+          "addressLine2": "Kasserine, Tunisie",
+          "email": "ordercraft2025@gmail.com",
+          "phone": "+216 21 886 537"
+        }
+      ]
+    }
+  },
+
+  "footer": {
+    "main": {
+      "title": "Principal",
+      "links": {
+        "blog": "Blog",
+        "faqs": "FAQs",
+        "support": "Assistance",
+        "about": "À propos de nous"
+      }
+    },
+    "product": {
+      "title": "Produit",
+      "links": {
+        "login": "Se connecter",
+        "personal": "Personnel",
+        "business": "Entreprise",
+        "team": "Équipe"
+      }
+    },
+    "press": {
+      "title": "Presse",
+      "links": {
+        "logos": "Logos",
+        "events": "Événements",
+        "stories": "Histoires",
+        "office": "Bureau"
+      }
+    },
+    "legal": {
+      "title": "Légal",
+      "links": {
+        "gdpr": "RGPD",
+        "privacy": "Politique de confidentialité",
+        "terms": "Conditions d'utilisation",
+        "disclaimer": "Avertissement"
+      }
+    },
+    "subscribe": {
+      "title": "Abonnez-vous à notre newsletter",
+      "description": "Nous livrons des articles de blog de haute qualité écrits par des professionnels chaque semaine. Et nous promettons pas de spam.",
+      "emailPlaceholder": "Votre adresse e-mail",
+      "subscribeButton": "S'abonner"
+    },
+    "social": {
+      "facebook": "https://facebook.com",
+      "twitter": "https://twitter.com",
+      "youtube": "https://youtube.com"
+    },
+    "copyright": {
+      "text": "&copy; 2024 Order Craft Inc. Tous droits réservés."
+    }
+  },
+
+  "about": {
+    "whoWeAre": "Qui Nous Sommes",
+    "cuttingEdgeApp": "Une application web de pointe.",
+    "ourVision": "Notre Vision",
+    "visionDescription": "Nous envisageons un monde où les restaurants sont entièrement numérisés.",
+    "ourMission": "Notre Mission",
+    "missionDescription": "Empower avec des outils intelligents, intuitifs et conviviaux.",
+    "missionDetail": "Chez Order Craft, notre mission est de permettre aux propriétaires de restaurants et de cafés d'utiliser des outils intelligents, intuitifs et conviviaux qui simplifient les tâches quotidiennes. Nous visons à créer une expérience de restauration sans contact, moderne et bénéfique pour les entreprises et leurs clients.",
+    "ourValues": "Nos Valeurs",
+    "whyChooseOrderCraft": "Pourquoi Choisir Order Craft ?",
+    "chooseOrderCraftDescription": "Faites partie de l'avenir de la restauration numérique ! Que vous soyez un petit café ou un grand restaurant, Order Craft est là pour transformer votre entreprise. 🚀",
+    "seamlessOrderingExperience": "Expérience de Commande Transparente",
+    "seamlessOrderingDescription": "Les clients peuvent scanner un code QR, explorer le menu, passer des commandes et même effectuer des paiements – le tout depuis leurs smartphones.",
+    "effortlessManagement": "Gestion Simplifiée",
+    "effortlessManagementDescription": "De la gestion des ventes à la gestion des serveurs, Order Craft offre des fonctionnalités puissantes pour les propriétaires d'entreprise.",
+    "enhancedCustomerSatisfaction": "Satisfaction Client Améliorée",
+    "enhancedCustomerDescription": "Un service plus rapide, des commandes faciles et des paiements numériques entraînent une expérience de restauration fluide.",
+    "realTimeInsights": "Aperçus en Temps Réel",
+    "realTimeDescription": "Obtenez des analyses basées sur les données pour améliorer la performance du menu, les stratégies de vente et les opérations commerciales globales.",
+    "ourTeam": "Notre Équipe",
+    "contactUs": "Contactez-nous",
+    "seePortfolio": "visiter-nous"
+  },
+  "blog": {
+    "heading": "Articles de blog",
+    "loadMore": "Voir plus",
+    "posts": [
+      {
+        "imageSrc": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1024&q=80",
+        "category": "Mise à jour produit",
+        "date": "20 Avril 2025",
+        "title": "Nouvelles fonctionnalités pour optimiser vos opérations",
+        "description": "Découvrez les dernières mises à jour d'OrderCraft : gestion des tables, suivi des commandes en temps réel, suggestions de menu par IA et bien plus.",
+        "url": "#",
+        "featured": true
+      },
+      {
+        "imageSrc": "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=1024&q=80",
+        "category": "Astuces",
+        "date": "18 Avril 2025",
+        "title": "5 astuces pour accélérer les commandes de votre café",
+        "description": "Réduisez les temps d'attente et améliorez la satisfaction client grâce à quelques ajustements simples dans OrderCraft.",
+        "url": "#"
+      },
+      {
+        "imageSrc": "https://images.unsplash.com/photo-1544148105-0b74482b3c1e?auto=format&fit=crop&w=1024&q=80",
+        "category": "Témoignage",
+        "date": "15 Avril 2025",
+        "title": "Comment Café Bloom a augmenté ses revenus de 35%",
+        "description": "Découvrez comment ce café local a transformé son activité avec une gestion intelligente des commandes et des promotions en ligne.",
+        "url": "#"
+      },
+      {
+        "imageSrc": "https://images.unsplash.com/photo-1542444459-db63c36a8d99?auto=format&fit=crop&w=1024&q=80",
+        "category": "Tendances",
+        "date": "10 Avril 2025",
+        "title": "Les 5 grandes tendances technologiques des restaurants en 2025",
+        "description": "Apprenez-en plus sur les bornes libre-service, les recommandations IA, les programmes de fidélité et le rôle d'OrderCraft dans ces évolutions.",
+        "url": "#"
+      },
+      {
+        "imageSrc": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1024&q=80",
+        "category": "Tutoriel",
+        "date": "5 Avril 2025",
+        "title": "Créer un menu en ligne en moins de 15 minutes",
+        "description": "Un guide simple pour créer votre menu numérique avec OrderCraft — sans code, sans stress.",
+        "url": "#"
+      },
+      {
+        "imageSrc": "https://images.unsplash.com/photo-1564675671004-c7b1af13d72b?auto=format&fit=crop&w=1024&q=80",
+        "category": "Annonce",
+        "date": "2 Avril 2025",
+        "title": "OrderCraft s'intègre aux applications de livraison !",
+        "description": "Gérez vos commandes UberEats, DoorDash, etc. directement dans OrderCraft et boostez vos ventes à emporter.",
+        "url": "#"
+      }
+    ]
+  },
+  "ThreeColumnWithProfileImage": {
+    "subheading": "Témoignages",
+    "heading": "Avis des clients",
+    "items": [
+      {
+        "quote": "Order Craft a complètement transformé la gestion des commandes dans notre café ! Les clients adorent la commodité de scanner un QR code pour commander.",
+        "customerName": "The Diesel"
+      },
+      {
+        "quote": "En tant que gérant de restaurant, Order Craft a rendu mon travail beaucoup plus facile.",
+        "customerName": "Felhi Food"
+      },
+      {
+        "quote": "J'ai eu la meilleure expérience avec Order Craft. C’est super facile et agréable !",
+        "customerName": "Sabri Slougui"
+      }
+    ]
+  },
+
+  "FeaturesSection": {
+    "subheading": "",
+    "heading": "Fonctionnalités",
+    "description": "Découvrez les fonctionnalités puissantes d'Order Craft...",
+    "items": [
+      {
+        "quote": "Le tableau de bord d'Order Craft vous offre une vue complète de votre entreprise en un seul endroit, vous aidant à suivre les performances et à prendre des décisions basées sur les données.<br/>✅ Statistiques de ventes – Surveillez les revenus quotidiens, hebdomadaires, mensuels et annuels avec des informations en temps réel.<br/>✅ Performance des produits – Identifiez les articles les plus vendus et optimisez votre menu en fonction des préférences des clients.<br/>✅ Gestion des commandes – Suivez les commandes entrantes, gérez leur statut et rationalisez les opérations efficacement.<br/>✅ Performance des employés – Évaluez la productivité du personnel et assurez un service de qualité.",
+        "featureName": "Tableau de bord",
+        "featureTitle": "Votre entreprise en un coup d'œil 📊🚀"
+      },
+      {
+        "quote": "Order Craft rend la commande facile avec la technologie QR code. Les clients scannent simplement le code à leur table, parcourent le menu et passent leur commande en quelques secondes – sans téléchargement d'application requis !<br/>✅ Commande sans contact – Sécurisée, rapide et efficace.<br/>✅ Commandes personnalisables – Les clients peuvent sélectionner des articles, ajouter des commentaires et modifier leur commande avant confirmation.<br/>✅ Traitement en temps réel – Les commandes vont directement à la cuisine, réduisant les temps d'attente et les erreurs.",
+        "featureName": "Commande par QR code",
+        "featureTitle": "Commande fluide avec un simple scan 📲"
+      },
+      {
+        "quote": "Gérez et personnalisez facilement votre menu avec Order Craft. Ajoutez, modifiez ou supprimez des articles, mettez à jour les prix et définissez des remises – le tout en temps réel.<br/>✅ Sections de menu flexibles – Organisez les articles par catégories pour une navigation facile.<br/>✅ Personnalisation des produits – Modifiez les descriptions, images et prix à tout moment.<br/>✅ Mises à jour instantanées – Les modifications apparaissent immédiatement sur le menu QR code du client.",
+        "featureName": "Gestion de menu",
+        "featureTitle": "Contrôle total sur votre menu 🍽️"
+      },
+      {
+        "quote": "Restez en contrôle des commandes de votre restaurant avec un suivi et une gestion en temps réel. Les commandes des QR codes sont directement envoyées au système, et le personnel peut les traiter facilement.<br/>✅ Suivi des statuts – Passez les commandes de en attente à en préparation puis terminées.<br/>✅ Modifications de commande – Mettez à jour, annulez ou priorisez les commandes selon les besoins.<br/>✅ Flux de travail fluide – Minimisez les erreurs et accélérez le service.",
+        "featureName": "Gestion des commandes",
+        "featureTitle": "Gestion des commandes en temps réel sans effort 📦"
+      },
+      {
+        "quote": "Simplifiez le processus de paiement avec Order Craft. Confirmez les transactions, divisez les additions et générez des reçus en toute simplicité.<br/>✅ Options de paiement multiples – Acceptez les paiements en espèces, par carte ou numériques.<br/>✅ Division des additions – Permettez aux clients de payer pour des articles individuels ou de diviser le total.<br/>✅ Gestion des reçus – Générez des reçus numériques et PDF instantanément.",
+        "featureName": "Paiements",
+        "featureTitle": "Traitement des paiements rapide et flexible 💳"
+      },
+      {
+        "quote": "Gardez votre personnel organisé avec un système efficace de gestion des serveurs. Attribuez des rôles, suivez les performances et contrôlez les niveaux d'accès.<br/>✅ Ajouter et supprimer du personnel – Mettez à jour facilement votre équipe dans le système.<br/>✅ Suivi des performances – Suivez les commandes traitées et la productivité.<br/>✅ Disponibilité du personnel – Activez ou désactivez les comptes du personnel selon les besoins.",
+        "featureName": "Gestion des serveurs",
+        "featureTitle": "Gestion efficace du personnel pour un meilleur service 👨‍🍳"
+      },
+      {
+        "quote": "Générez des reçus quotidiens détaillés pour suivre les ventes, les pourboires et les revenus pour chaque service. Les serveurs peuvent clôturer leurs reçus et télécharger un résumé PDF.<br/>✅ Suivi des ventes quotidiennes – Consultez toutes les commandes traitées pendant le service.<br/>✅ Gestion des pourboires – Surveillez le total des pourboires reçus par service.<br/>✅ Export PDF en un clic – Générez et stockez facilement des rapports quotidiens.",
+        "featureName": "Système de reçus quotidiens",
+        "featureTitle": "Rapports de service complets à portée de main 📑"
+      },
+      {
+        "quote": "Contrôlez quels articles du menu sont disponibles à la commande en temps réel. Marquez les articles comme indisponibles, et ils seront visibles pour les clients mais non sélectionnables.<br/>✅ Disponibilité en temps réel – Mettez à jour le statut des produits instantanément.<br/>✅ Transparence pour les clients – Les articles indisponibles sont affichés mais ne peuvent pas être commandés.<br/>✅ Contrôle facile des stocks – Réduisez la déception des clients en gérant efficacement les stocks.",
+        "featureName": "Disponibilité des produits",
+        "featureTitle": "Gestion intelligente des stocks pour une meilleure expérience client 🚀"
+      }
+    ]
+  },
+  "PricingSection": {
+    "subheading": "Tarification",
+    "heading": "Plans Flexibles.",
+    "description": "Choisissez le modèle de tarification qui correspond le mieux aux besoins de votre entreprise - simple, transparent et conçu pour la croissance.",
+    "primaryButtonText": "Choisir le Plan",
+    "planDurations": [
+      {
+        "text": "Mois",
+        "switcherText": "Mensuel"
+      },
+      {
+        "text": "An",
+        "switcherText": "Annuel"
+      }
+    ],
+    "plans": [
+      {
+        "name": "Plan Pourcentage",
+        "durationPrices": ["4%", "4%"],
+        "mainFeature": "Calculé automatiquement sur chaque reçu",
+        "features": [
+          "Seulement 4% de chaque reçu",
+          "Facturation entièrement automatisée",
+          "Pas de frais initiaux",
+          "Astuce : Ajoutez 4% à chaque prix de produit pour le couvrir complètement !"
+        ]
+      },
+      {
+        "name": "Frais Fixe par Commande",
+        "durationPrices": ["0,15 TND", "0,15 TND"],
+        "mainFeature": "Facturé par commande complétée",
+        "features": [
+          "0,15 TND par commande",
+          "Calculé automatiquement",
+          "Idéal pour les petites entreprises",
+          "Payez seulement quand vous gagnez"
+        ]
+      },
+      {
+        "name": "Plan Abonnement",
+        "durationPrices": ["240 TND", "2 640 TND"],
+        "mainFeature": "Paiement mensuel ou annuel",
+        "features": [
+          "300 TND frais d'installation initiaux",
+          "240 TND/mois OU 2 640 TND/an (économisez 360 TND)",
+          "Pas de frais cachés",
+          "Toutes les fonctionnalités débloquées"
+        ],
+        "featured": true
+      }
+    ]
+  },
+
+  "Header": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "blog": "Blog",
+    "features": "Fonct",
+    "pricing": "Tarif",
+    "contact": "Contat",
+    "login": "Connexion",
+    "signup": "se connecter"
+  },
+  "PlatformSection": {
+    "heading": "Plateforme Tout-en-Un pour Gérer Votre Restaurant ou Café.",
+    "description": [
+      "✅ Propre & Professionnel: Découvrez les outils puissants qui rendent la gestion de votre restaurant ou café plus rapide, plus intelligente et plus efficace.",
+      "✅ Convivial & Accessible: Tout ce dont vous avez besoin pour gérer votre établissement en douceur, directement à portée de main.",
+      "✅ Axé sur les Avantages: De la commande intelligente au suivi en temps réel, découvrez comment Order Craft vous aide à gagner du temps, augmenter les ventes et ravir vos clients.",
+      "✅ Direct au But: Conçu pour la simplicité, construit pour la performance - découvrez ce qui fait d'Order Craft le compagnon ultime de la restauration."
+    ],
+    "statistics": [
+      {
+        "key": "Pays",
+        "value": "3"
+      },
+      {
+        "key": "Restaurants",
+        "value": "7"
+      },
+      {
+        "key": "Cafés",
+        "value": "11"
+      },
+      {
+        "key": "Employés",
+        "value": "170"
+      }
+    ]
+  },
+  "TwoColWithButton": {
+    "subheading": "Notre Expertise",
+    "heading": "Conçu & Développé par des <1>Professionnels.</1>",
+    "description": "Nous envisageons un monde où les opérations des restaurants et cafés sont entièrement numérisées, réduisant la charge de travail manuelle tout en améliorant la vitesse de service, la précision et la satisfaction des clients. Notre objectif est de devenir la plateforme de référence pour les établissements alimentaires, y compris les cafés et restaurants, à la recherche d'innovation et d'efficacité.",
+    "primaryButtonText": "En savoir plus"
+  },
+
+  "FAQSection": {
+    "subheading": "FAQ",
+    "heading": "Questions sur les Tarifs?",
+    "description": "Tout ce que vous devez savoir sur notre tarification, ce que vous obtenez et comment tirer le meilleur parti de votre abonnement Order Craft.",
+    "faqs": [
+      {
+        "question": "Comment est calculé le plan à 4% ?",
+        "answer": "Order Craft calcule automatiquement 4% de chaque reçu comme frais d'abonnement. Vous pouvez éventuellement ajouter ce pourcentage aux prix de vos produits, de sorte que le coût de la plateforme est essentiellement couvert par le client."
+      },
+      {
+        "question": "Que comprend le plan à 0,15 TND/commande ?",
+        "answer": "Ce plan facture un montant fixe de 0,15 TND par commande passée via la plateforme. Il est idéal pour les entreprises à faible volume ou celles qui préfèrent un coût prévisible par commande."
+      },
+      {
+        "question": "Quelle est la différence avec le plan d'abonnement ?",
+        "answer": "Le plan d'abonnement nécessite un paiement initial de 300 TND puis 240 TND mensuels. Si vous choisissez de payer annuellement, vous bénéficiez d'une réduction — seulement 2 640 TND par an au lieu de 2 880 TND. C'est le meilleur choix pour les entreprises en croissance qui souhaitent évoluer avec des coûts fixes."
+      },
+      {
+        "question": "Puis-je changer de plan plus tard ?",
+        "answer": "Oui, vous pouvez changer de plan tarifaire à tout moment via les paramètres de votre compte. Nous vous recommandons d'examiner votre volume de commandes et vos préférences pour choisir l'option la plus économique."
+      },
+      {
+        "question": "Y a-t-il un essai gratuit disponible ?",
+        "answer": "Oui ! Vous pouvez explorer Order Craft avec des fonctionnalités limitées pendant une période d'essai. Cela vous permet de voir la plateforme en action avant de vous engager dans un plan payant."
+      }
+    ]
+  }
+}

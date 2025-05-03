@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { css } from "styled-components/macro"; //eslint-disable-line
+import { css } from "styled-components/macro";
 import {
   SectionHeading,
   Subheading as SubheadingBase,
@@ -12,6 +12,8 @@ import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { ReactComponent as ChevronDownIcon } from "feather-icons/dist/icons/chevron-down.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-7.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-8.svg";
+import { useLanguage } from "context/LanguageContext";
+import { getTranslation } from "utils/i18n";
 
 const Subheading = tw(SubheadingBase)`mb-4 text-center`;
 const Heading = tw(SectionHeading)`w-full`;
@@ -41,39 +43,13 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
   ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-64 w-64 opacity-15 transform -translate-x-2/3 text-primary-500`}
 `;
 
-export default ({
-  subheading = "FAQS",
-  heading = "Pricing Questions?",
-  description = "Everything you need to know about how our pricing works, what you get, and how to make the most out of your Order Craft subscription.",
-  faqs = [
-    {
-      question: "How is the 4% plan calculated?",
-      answer:
-        "Order Craft automatically calculates 4% of each receipt as your subscription fee. You can optionally add this percentage to your product prices, so the platform cost is essentially covered by the customer.",
-    },
-    {
-      question: "What is included in the 0.15 TND/order plan?",
-      answer:
-        "This plan charges a fixed fee of 0.15 TND per order placed through the platform. It’s ideal for businesses with lower volume or those who prefer predictable cost per order.",
-    },
-    {
-      question: "What’s the difference with the subscription plan?",
-      answer:
-        "The subscription plan requires an upfront payment of 300 TND and then 240 TND monthly. If you choose to pay annually, you get a discount — only 2,640 TND per year instead of 2,880 TND. This is best for growing businesses that want to scale with fixed costs.",
-    },
-    {
-      question: "Can I switch between plans later?",
-      answer:
-        "Yes, you can switch between pricing plans at any time through your account settings. We recommend reviewing your order volume and preferences to pick the most cost-effective option.",
-    },
-    {
-      question: "Is there a free trial available?",
-      answer:
-        "Yes! You can explore Order Craft with limited features during a trial period. This allows you to see the platform in action before committing to a paid plan.",
-    },
-  ],
-}) => {
+export default () => {
+  const { language } = useLanguage();
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(null);
+  const { subheading, heading, description, faqs } = getTranslation(
+    "FAQSection",
+    language
+  );
 
   const toggleQuestion = (questionIndex) => {
     if (activeQuestionIndex === questionIndex) setActiveQuestionIndex(null);

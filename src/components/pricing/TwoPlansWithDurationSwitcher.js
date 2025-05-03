@@ -11,6 +11,8 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-6.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
+import { useLanguage } from "context/LanguageContext";
+import { getTranslation } from "utils/i18n";
 
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4`;
@@ -71,63 +73,20 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
   ${tw`pointer-events-none -z-20 absolute right-0 top-0 h-64 w-64 opacity-25 transform translate-x-2/3 translate-y-1/2 fill-current text-teal-300`}
 `;
 
-export default ({
-  subheading = "Pricing",
-  heading = "Flexible Plans.",
-  description = "Choose the pricing model that best fits your business needs — simple, transparent, and built for growth.",
-  plans = null,
-  primaryButtonText = "Choose Plan",
-  planDurations = [
-    {
-      text: "Month",
-      switcherText: "Monthly",
-    },
-    {
-      text: "Year",
-      switcherText: "Yearly",
-    },
-  ],
-}) => {
-  const defaultPlans = [
-    {
-      name: "Percentage Plan",
-      durationPrices: ["4%", "4%"],
-      mainFeature: "Auto-calculated from each receipt",
-      features: [
-        "Only 4% of each receipt",
-        "Fully automated billing",
-        "No upfront fees",
-        "Tip: Add 4% to each product price to cover it completely!",
-      ],
-    },
-    {
-      name: "Fixed Order Fee",
-      durationPrices: ["0.15 TND", "0.15 TND"],
-      mainFeature: "Charged per completed order",
-      features: [
-        "0.15 TND per order",
-        "Automatically calculated",
-        "Ideal for small businesses",
-        "Pay only when you profit",
-      ],
-    },
-    {
-      name: "Subscription Plan",
-      durationPrices: ["240 TND", "2,640 TND"],
-      mainFeature: "Monthly or yearly payment",
-      features: [
-        "300 TND initial setup fee",
-        "240 TND/month OR 2,640 TND/year (save 360 TND)",
-        "No hidden fees",
-        "All features unlocked",
-      ],
-      featured: true,
-    },
-  ];
-
-  if (!plans) plans = defaultPlans;
-
+export default () => {
+  const { language } = useLanguage();
   const [activeDurationIndex, setActiveDurationIndex] = useState(0);
+
+  // Get translations
+  const pricingData = getTranslation("PricingSection", language);
+  const {
+    subheading,
+    heading,
+    description,
+    primaryButtonText,
+    planDurations,
+    plans,
+  } = pricingData;
 
   return (
     <Container>

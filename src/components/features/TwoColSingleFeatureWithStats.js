@@ -3,7 +3,10 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "components/misc/Headings.js";
-import Global from "../../images/features/OC-global.png"
+import Global from "../../images/features/OC-global.png";
+import { useLanguage } from "context/LanguageContext";
+import { getTranslation } from "utils/i18n";
+
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
@@ -34,26 +37,8 @@ const Value = tw.div`font-bold text-primary-500`;
 const Key = tw.div`font-medium text-gray-700`;
 
 export default ({ textOnLeft = false }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
-  //Change the statistics variable as you like, add or delete objects
-  const statistics = [
-    {
-      key: "Countries",
-      value: "3",
-    },
-    {
-      key: "Restaurants",
-      value: "7",
-    },
-    {
-      key: "Coffee shops ",
-      value: "11",
-    },
-    {
-      key: "Workers",
-      value: "170",
-    },
-  ];
+  const { language } = useLanguage();
+  const platformData = getTranslation("PlatformSection", language);
 
   return (
     <Container>
@@ -63,23 +48,17 @@ export default ({ textOnLeft = false }) => {
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
-            <Heading>
-              All-in-One Platform to Run Your Restaurant or Café.
-            </Heading>
+            <Heading>{platformData.heading}</Heading>
             <Description>
-              ✅ <b>Clean & Professional</b>: Discover the powerful tools that
-              make managing your restaurant or café faster, smarter, and more
-              efficient. <br />✅ <b>Friendly & Approachable</b>: Everything you
-              need to run your place smoothly—right at your fingertips.
-              <br /> ✅ <b>Benefit-Focused</b>: From smart ordering to real-time
-              tracking, explore how Order Craft helps you save time, boost
-              sales, and delight customers.
-              <br /> ✅ <b>Straight to the Point</b>: Designed for simplicity,
-              built for performance—see what makes Order Craft the ultimate food
-              service companion..
+              {platformData.description.map((item, index) => (
+                <React.Fragment key={index}>
+                  {item}
+                  <br />
+                </React.Fragment>
+              ))}
             </Description>
             <Statistics>
-              {statistics.map((statistic, index) => (
+              {platformData.statistics.map((statistic, index) => (
                 <Statistic key={index}>
                   <Value>{statistic.value}</Value>
                   <Key>{statistic.key}</Key>

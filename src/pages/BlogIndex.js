@@ -8,6 +8,8 @@ import Header from "components/headers/light.js";
 import Footer from "components/footers/FiveColumnWithInputForm.js";
 import { SectionHeading } from "components/misc/Headings";
 import { PrimaryButton } from "components/misc/Buttons";
+import { useLanguage } from "context/LanguageContext";
+import { getTranslation } from "utils/i18n";
 
 const HeadingRow = tw.div`flex`;
 const Heading = tw(SectionHeading)`text-gray-900`;
@@ -49,83 +51,20 @@ const Description = tw.div``;
 const ButtonContainer = tw.div`flex justify-center`;
 const LoadMoreButton = tw(PrimaryButton)`mt-16 mx-auto`;
 
-export default ({
-  headingText = "Blog Posts",
-  posts = [
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1024&q=80",
-      category: "Product Update",
-      date: "April 20, 2025",
-      title: "New Features to Supercharge Your Restaurant Operations",
-      description:
-        "Discover the latest updates to OrderCraft: table management, real-time order tracking, and AI-driven menu suggestions designed to make your workflow smoother than ever.",
-      url: "#", // You can replace "#" with a real link
-      featured: true,
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=1024&q=80",
-      category: "Tips & Tricks",
-      date: "April 18, 2025",
-      title: "5 Tips to Speed Up Your Coffee Shop Orders with OrderCraft",
-      description:
-        "Learn how simple tweaks inside OrderCraft can reduce wait times and boost customer satisfaction in your coffee shop or café.",
-      url: "#",
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1544148105-0b74482b3c1e?auto=format&fit=crop&w=1024&q=80",
-      category: "Success Story",
-      date: "April 15, 2025",
-      title: "How Café Bloom Increased Revenue by 35% Using OrderCraft",
-      description:
-        "Read how a local café transformed their operations and improved customer loyalty with smart order management and online promotions through OrderCraft.",
-      url: "#",
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1542444459-db63c36a8d99?auto=format&fit=crop&w=1024&q=80",
-      category: "Industry Insights",
-      date: "April 10, 2025",
-      title: "Top 5 Trends in Restaurant Technology for 2025",
-      description:
-        "Stay ahead of the curve by learning about self-service kiosks, AI-powered recommendations, loyalty programs, and how OrderCraft supports these trends.",
-      url: "#",
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1024&q=80",
-      category: "How-To",
-      date: "April 5, 2025",
-      title: "Setting Up Your Online Menu in Less Than 15 Minutes",
-      description:
-        "A step-by-step guide to setting up your digital menu with OrderCraft — no coding, no headaches, just beautiful results.",
-      url: "#",
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1564675671004-c7b1af13d72b?auto=format&fit=crop&w=1024&q=80",
-      category: "Announcements",
-      date: "April 2, 2025",
-      title: "OrderCraft Now Integrates with Delivery Apps!",
-      description:
-        "Manage orders from UberEats, DoorDash, and more directly inside OrderCraft. Learn how to activate integrations and maximize your delivery sales.",
-      url: "#",
-    },
-  ],
-}) => {
+export default () => {
   const [visible, setVisible] = useState(7);
   const onLoadMoreClick = () => {
     setVisible((v) => v + 6);
   };
+  const { language } = useLanguage();
+  const posts = getTranslation("blog.posts", language);
   return (
     <AnimationRevealPage>
       <Header />
       <Container>
         <ContentWithPaddingXl>
           <HeadingRow>
-            <Heading>{headingText}</Heading>
+            <Heading>{getTranslation("blog.heading", language)}</Heading>
           </HeadingRow>
           <Posts>
             {posts.slice(0, visible).map((post, index) => (
@@ -147,7 +86,7 @@ export default ({
           {visible < posts.length && (
             <ButtonContainer>
               <LoadMoreButton onClick={onLoadMoreClick}>
-                Load More
+                {getTranslation("blog.loadMore", language)}
               </LoadMoreButton>
             </ButtonContainer>
           )}
@@ -157,5 +96,3 @@ export default ({
     </AnimationRevealPage>
   );
 };
-
-

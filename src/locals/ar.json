@@ -1,0 +1,93 @@
+{
+    "landingPage": {
+      "hero": {
+        "title": "Introducing OrderCraft",
+        "subtitle": "Revolutionizing Restaurant Management.",
+        "description": "Simplify operations, enhance customer experiences, and drive growth with our all-in-one smart ordering platform.",
+        "getStarted": "Get Started"
+      },
+      "problem": {
+        "title": "The Problem",
+        "description": "Traditional restaurant operations are slow, error-prone, and costly",
+        "details": "Manual order taking, paper menus, and outdated processes frustrate staff and customers. It's time for a change",
+        "cta": "See How We Help"
+      },
+      "solution": {
+        "title": "The Solution",
+        "description": "OrderCraft brings your restaurant into the digital age",
+        "details": "Empower customers to order and pay from their phones, streamline operations, and unlock real-time insights — all from one powerful platform",
+        "cta": "Start Today"
+      },
+      "features": {
+        "title": "Features",
+        "subtitle": "Smart, Fast, and Customer-Friendly",
+        "description": "OrderCraft equips you with everything you need to deliver a modern dining experience",
+        "list": {
+          "contactlessOrdering": {
+            "title": "Contactless Ordering",
+            "description": "Allow guests to browse the menu, place orders, and pay directly from their smartphones"
+          },
+          "tableWaiterManagement": {
+            "title": "Table & Waiter Management",
+            "description": "Assign tables, track service times, and optimize staff productivity effortlessly"
+          },
+          "realTimeMenuControl": {
+            "title": "Real-Time Menu Control",
+            "description": "Easily update prices, availability, and promotions on the fly with our intuitive dashboard"
+          },
+          "dataDrivenInsights": {
+            "title": "Data-Driven Insights",
+            "description": "Analyze sales trends, customer preferences, and optimize your business decisions"
+          }
+        }
+      },
+      "howItWorks": {
+        "title": "How It Works",
+        "subtitle": "Just 3 Easy Steps",
+        "steps": {
+          "signupSetup": {
+            "title": "Sign Up & Setup",
+            "description": "Create your restaurant profile, upload your menu, and customize settings"
+          },
+          "launchMenu": {
+            "title": "Launch Your Digital Menu",
+            "description": "Display QR codes on tables, enabling guests to start ordering immediately"
+          },
+          "manageGrow": {
+            "title": "Manage & Grow",
+            "description": "Track orders, analyze performance, and scale your business effortlessly"
+          }
+        }
+      },
+      "trustedBy": {
+        "title": "Trusted by Restaurants",
+        "description": "Join 200+ Restaurants Embracing the Future",
+        "details": "From cozy cafés to bustling restaurants, businesses across the country trust OrderCraft to deliver a seamless dining experience",
+        "cta": "Become a Partner"
+      }
+    },
+  
+    "contactPage": {
+      "form": {
+        "subheading": "Contact Us",
+        "heading": "Feel free to <1>get in touch</1> with us.",
+        "description": "Have a question, suggestion, or need support? We're always ready to assist. Fill out the form and we'll reply as soon as possible.",
+        "submitButtonText": "Send Message"
+      },
+      "details": {
+        "subheading": "Our Location",
+        "heading": "Come Visit Us",
+        "description": "You’re always welcome at our office. Feel free to call, email, or visit us anytime during business hours.",
+        "cards": [
+          {
+            "city": "El Ayoun, Kasserine",
+            "addressLine1": "El Ayoun City",
+            "addressLine2": "Kasserine, Tunisia",
+            "email": "ordercraft2025@gmail.com",
+            "phone": "+216 21 886 537"
+          }
+        ]
+      }
+    }
+  }
+  

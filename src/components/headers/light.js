@@ -10,6 +10,9 @@ import logo from "../../images/ordercraft-logo.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 import { useLocation } from "react-router-dom";
+import LanguageSelector from "./LanguageSelector.js";
+import { useLanguage } from "context/LanguageContext.js";
+import { getTranslation } from "utils/i18n.js";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -70,39 +73,30 @@ export default ({
   className,
   collapseBreakpointClass = "lg",
 }) => {
-  /*
-   * This header component accepts an optionals "links" prop that specifies the links to render in the navbar.
-   * This links props should be an array of "NavLinks" components which is exported from this file.
-   * Each "NavLinks" component can contain any amount of "NavLink" component, also exported from this file.
-   * This allows this Header to be multi column.
-   * So If you pass only a single item in the array with only one NavLinks component as root, you will get 2 column header.
-   * Left part will be LogoLink, and the right part will be the the NavLinks component you
-   * supplied.
-   * Similarly if you pass 2 items in the links array, then you will get 3 columns, the left will be "LogoLink", the center will be the first "NavLinks" component in the array and the right will be the second "NavLinks" component in the links array.
-   * You can also choose to directly modify the links here by not passing any links from the parent component and
-   * changing the defaultLinks variable below below.
-   * If you manipulate links here, all the styling on the links is already done for you. If you pass links yourself though, you are responsible for styling the links or use the helper styled components that are defined here (NavLink)
-   */
+  const { language } = useLanguage(); // Assume this hook gives you the selected language
   const location = useLocation();
+  const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
+  const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
+
   const defaultLinks = [
     <NavLinks key={1}>
       <NavLink href="/" active={location.pathname === "/"}>
-        Home
+        {getTranslation("Header.home", language)}
       </NavLink>
       <NavLink href="/about" active={location.pathname === "/about"}>
-        About
+        {getTranslation("Header.about", language)}
       </NavLink>
       <NavLink href="/blog" active={location.pathname === "/blog"}>
-        Blog
+        {getTranslation("Header.blog", language)}
       </NavLink>
       <NavLink href="/features" active={location.pathname === "/features"}>
-        Features
+        {getTranslation("Header.features", language)}
       </NavLink>
       <NavLink href="/pricing" active={location.pathname === "/pricing"}>
-        Pricing
+        {getTranslation("Header.pricing", language)}
       </NavLink>
       <NavLink href="/contact" active={location.pathname === "/contact"}>
-        Contact Us
+        {getTranslation("Header.contact", language)}
       </NavLink>
 
       <NavLink
@@ -110,22 +104,21 @@ export default ({
         active={location.pathname === "/login"}
         tw="lg:ml-12!"
       >
-        Login
+        {getTranslation("Header.login", language)}
       </NavLink>
       <PrimaryLink href="/signup" css={roundedHeaderButton && tw`rounded-full`}>
-        Sign Up
+        {getTranslation("Header.signup", language)}
       </PrimaryLink>
     </NavLinks>,
   ];
 
-  const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
-  const collapseBreakpointCss =
-    collapseBreakPointCssMap[collapseBreakpointClass];
-
   const defaultLogoLink = (
-    <LogoLink href="/">
-      <img src={logo} alt="logo" />
-    </LogoLink>
+    <>
+      <LogoLink href="/">
+        <img src={logo} alt="logo" />
+      </LogoLink>
+      <LanguageSelector />
+    </>
   );
 
   logoLink = logoLink || defaultLogoLink;
@@ -138,9 +131,7 @@ export default ({
         {links}
       </DesktopNavLinks>
 
-      <MobileNavLinksContainer
-        css={collapseBreakpointCss.mobileNavLinksContainer}
-      >
+      <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
         {logoLink}
         <MobileNavLinks
           initial={{ x: "150%", display: "none" }}
@@ -164,11 +155,6 @@ export default ({
   );
 };
 
-/* The below code is for generating dynamic break points for navbar.
- * Using this you can specify if you want to switch
- * to the toggleable mobile navbar at "sm", "md" or "lg" or "xl" above using the collapseBreakpointClass prop
- * Its written like this because we are using macros and we can not insert dynamic variables in macros
- */
 
 const collapseBreakPointCssMap = {
   sm: {

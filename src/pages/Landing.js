@@ -18,41 +18,60 @@ import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";
 import CustomerLoveIconImage from "images/simple-icon.svg";
 import ReliableIconImage from "images/reliable-icon.svg";
-
+import { useLanguage } from "../context/LanguageContext";
+import { getTranslation } from "../utils/i18n";
 const Subheading = tw.span`uppercase tracking-wider text-sm text-primary-500`;
 
 export default () => {
+  const { language } = useLanguage();
+
   return (
     <AnimationRevealPage>
       <Header />
 
       {/* Hero Section */}
       <MainFeature1
-        subheading={<Subheading>Introducing OrderCraft</Subheading>}
-        heading="Revolutionizing Restaurant Management."
-        description="Simplify operations, enhance customer experiences, and drive growth with our all-in-one smart ordering platform."
-        primaryButtonText="Get Started"
+        subheading={
+          <Subheading>
+            {getTranslation("landingPage.hero.title", language)}
+          </Subheading>
+        }
+        heading={getTranslation("landingPage.hero.subtitle", language)}
+        description={getTranslation("landingPage.hero.description", language)}
+        primaryButtonText={getTranslation(
+          "landingPage.hero.getStarted",
+          language
+        )}
         buttonRounded={true}
         imageSrc={HeroImage}
         textOnLeft={false}
       />
 
-      {/* Problem/Solution */}
+      {/* Problem Section */}
       <MainFeature1
-        subheading={<Subheading>The Problem</Subheading>}
-        heading="Traditional restaurant operations are slow, error-prone, and costly."
-        description="Manual order taking, paper menus, and outdated processes frustrate staff and customers. It's time for a change."
-        primaryButtonText="See How We Help"
+        subheading={
+          <Subheading>
+            {getTranslation("landingPage.problem.title", language)}
+          </Subheading>
+        }
+        heading={getTranslation("landingPage.problem.description", language)}
+        description={getTranslation("landingPage.problem.details", language)}
+        primaryButtonText={getTranslation("landingPage.problem.cta", language)}
         buttonRounded={true}
         imageSrc={VisionImage}
         textOnLeft={true}
       />
 
+      {/* Solution Section */}
       <MainFeature1
-        subheading={<Subheading>The Solution</Subheading>}
-        heading="OrderCraft brings your restaurant into the digital age."
-        description="Empower customers to order and pay from their phones, streamline operations, and unlock real-time insights — all from one powerful platform."
-        primaryButtonText="Start Today"
+        subheading={
+          <Subheading>
+            {getTranslation("landingPage.solution.title", language)}
+          </Subheading>
+        }
+        heading={getTranslation("landingPage.solution.description", language)}
+        description={getTranslation("landingPage.solution.details", language)}
+        primaryButtonText={getTranslation("landingPage.solution.cta", language)}
         buttonRounded={true}
         imageSrc={FeaturesImage}
         textOnLeft={false}
@@ -60,71 +79,126 @@ export default () => {
 
       {/* Features Section */}
       <Features
-        subheading={<Subheading>Features</Subheading>}
-        heading="Smart, Fast, and Customer-Friendly."
-        description="OrderCraft equips you with everything you need to deliver a modern dining experience."
+        subheading={
+          <Subheading>
+            {getTranslation("landingPage.features.title", language)}
+          </Subheading>
+        }
+        heading={getTranslation("landingPage.features.subtitle", language)}
+        description={getTranslation(
+          "landingPage.features.description",
+          language
+        )}
         cards={[
           {
             imageSrc: SupportIconImage,
-            title: "Contactless Ordering",
-            description:
-              "Allow guests to browse the menu, place orders, and pay directly from their smartphones."
+            title: getTranslation(
+              "landingPage.features.list.contactlessOrdering.title",
+              language
+            ),
+            description: getTranslation(
+              "landingPage.features.list.contactlessOrdering.description",
+              language
+            ),
           },
           {
             imageSrc: ShieldIconImage,
-            title: "Table & Waiter Management",
-            description:
-              "Assign tables, track service times, and optimize staff productivity effortlessly."
+            title: getTranslation(
+              "landingPage.features.list.tableWaiterManagement.title",
+              language
+            ),
+            description: getTranslation(
+              "landingPage.features.list.tableWaiterManagement.description",
+              language
+            ),
           },
           {
             imageSrc: CustomerLoveIconImage,
-            title: "Real-Time Menu Control",
-            description:
-              "Easily update prices, availability, and promotions on the fly with our intuitive dashboard."
+            title: getTranslation(
+              "landingPage.features.list.realTimeMenuControl.title",
+              language
+            ),
+            description: getTranslation(
+              "landingPage.features.list.realTimeMenuControl.description",
+              language
+            ),
           },
           {
             imageSrc: ReliableIconImage,
-            title: "Data-Driven Insights",
-            description:
-              "Analyze sales trends, customer preferences, and optimize your business decisions."
-          }
+            title: getTranslation(
+              "landingPage.features.list.dataDrivenInsights.title",
+              language
+            ),
+            description: getTranslation(
+              "landingPage.features.list.dataDrivenInsights.description",
+              language
+            ),
+          },
         ]}
         linkText=""
       />
 
-      {/* How it Works */}
+      {/* How It Works */}
       <HowItWorks
-        subheading={<Subheading>How It Works</Subheading>}
-        heading="Just 3 Easy Steps."
+        subheading={
+          <Subheading>
+            {getTranslation("landingPage.howItWorks.title", language)}
+          </Subheading>
+        }
+        heading={getTranslation("landingPage.howItWorks.subtitle", language)}
         steps={[
           {
-            title: "Sign Up & Setup",
-            description: "Create your restaurant profile, upload your menu, and customize settings."
+            title: getTranslation(
+              "landingPage.howItWorks.steps.signupSetup.title",
+              language
+            ),
+            description: getTranslation(
+              "landingPage.howItWorks.steps.signupSetup.description",
+              language
+            ),
           },
           {
-            title: "Launch Your Digital Menu",
-            description: "Display QR codes on tables, enabling guests to start ordering immediately."
+            title: getTranslation(
+              "landingPage.howItWorks.steps.launchMenu.title",
+              language
+            ),
+            description: getTranslation(
+              "landingPage.howItWorks.steps.launchMenu.description",
+              language
+            ),
           },
           {
-            title: "Manage & Grow",
-            description: "Track orders, analyze performance, and scale your business effortlessly."
-          }
+            title: getTranslation(
+              "landingPage.howItWorks.steps.manageGrow.title",
+              language
+            ),
+            description: getTranslation(
+              "landingPage.howItWorks.steps.manageGrow.description",
+              language
+            ),
+          },
         ]}
         textOnLeft={true}
       />
 
-      {/* Client Logos */}
+      {/* Trusted by Section */}
       <MainFeature1
-        subheading={<Subheading>Trusted by Restaurants</Subheading>}
-        heading="Join 200+ Restaurants Embracing the Future."
-        description="From cozy cafés to bustling restaurants, businesses across the country trust OrderCraft to deliver a seamless dining experience."
-        primaryButtonText="Become a Partner"
+        subheading={
+          <Subheading>
+            {getTranslation("landingPage.trustedBy.title", language)}
+          </Subheading>
+        }
+        heading={getTranslation("landingPage.trustedBy.description", language)}
+        description={getTranslation("landingPage.trustedBy.details", language)}
+        primaryButtonText={getTranslation(
+          "landingPage.trustedBy.cta",
+          language
+        )}
         buttonRounded={true}
         imageSrc={ClientsLogoStripImage}
         textOnLeft={false}
       />
 
-     
       {/* Footer */}
       <Footer />
     </AnimationRevealPage>

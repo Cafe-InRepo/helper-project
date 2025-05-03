@@ -14,6 +14,8 @@ import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chev
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-4.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "../../images/svg-decorator-blob-5.svg";
+import { useLanguage } from "context/LanguageContext";
+import { getTranslation } from "utils/i18n";
 
 import dashboard from "../../images/features/sales-stats.png";
 import qrCodeOrdering from "../../images/features/qrCodeOrdering.avif";
@@ -90,86 +92,38 @@ const CloseButton = styled.button`
   ${tw`absolute m-2 text-white text-2xl font-bold bg-gray-800 rounded-full p-2 z-50 transition`}
 `;
 
-const feautures = [
-  {
-    imageSrc: dashboard,
-
-    quote:
-      "Order Craft's dashboard gives you a complete overview of your business in one place, helping you track performance and make data-driven decisions.<br/>✅ Sales Statistics – Monitor daily, weekly, monthly, and yearly revenue with real-time insights.<br/>✅ Product Performance – Identify best-selling items and optimize your menu based on customer preferences.<br/>✅ Order Management – Track incoming orders, manage their status, and streamline operations efficiently.<br/>✅ Employee Performance – Evaluate staff productivity and ensure top-notch service.",
-      featureName: "Dashboard ",
-    featureTitle: "Your Business at a Glance 📊🚀.",
-  },
-  {
-    imageSrc: qrCodeOrdering,
-    quote:
-      "Order Craft makes ordering effortless with QR code technology. Customers simply scan the code at their table, browse the menu, and place their order in seconds—no app download required!<br/>✅ Contactless Ordering – Safe, fast, and efficient.<br/>✅ Customizable Orders – Customers can select items, add comments, and modify their order before confirmation.<br/>✅ Real-Time Processing – Orders go directly to the kitchen, reducing wait times and errors.",
-    featureName: "QR Code Ordering",
-    featureTitle: "Seamless Ordering with a Simple Scan 📲",
-  },
-  {
-    imageSrc: menuManagement,
-    quote:
-      "Easily manage and customize your menu with Order Craft. Add, edit, or remove items, update prices, and set discounts—all in real-time.<br/>✅ Flexible Menu Sections – Organize items into categories for easy browsing.<br/>✅ Product Customization – Edit descriptions, images, and pricing anytime.<br/>✅ Instant Updates – Changes reflect immediately on the customer’s QR code menu.",
-    featureName: "Menu Management",
-    featureTitle: "Complete Control Over Your Menu 🍽️",
-  },
-  {
-    imageSrc: orderManagement,
-    quote:
-      "Stay in control of your restaurant’s orders with real-time tracking and management. Orders from QR codes are directly sent to the system, and staff can process them with ease.<br/>✅ Status Tracking – Move orders from pending to preparing to completed.<br/>✅ Order Modifications – Update, cancel, or prioritize orders as needed.<br/>✅ Smooth Workflow – Minimize errors and speed up service.",
-    featureName: "Order Management",
-    featureTitle: "Effortless Order Handling in Real-Time 📦",
-  },
-  {
-    imageSrc: payments,
-    quote:
-      "Simplify the payment process with Order Craft. Confirm transactions, split bills, and generate receipts effortlessly.<br/>✅ Multiple Payment Options – Accept cash, card, or digital payments.<br/>✅ Bill Splitting – Let customers pay for individual items or split the total.<br/>✅ Receipt Management – Generate digital and PDF receipts instantly.",
-    featureName: "Payments",
-    featureTitle: "Fast & Flexible Payment Processing 💳",
-  },
-  {
-    imageSrc: waitersManagement,
-    quote:
-      "Keep your staff organized with an efficient waiter management system. Assign roles, track performance, and control access levels.<br/>✅ Add & Remove Staff – Easily update your team in the system.<br/>✅ Monitor Performance – Track completed orders and productivity.<br/>✅ Staff Availability – Activate or deactivate staff accounts as needed.",
-    featureName: "Waiters Management",
-    featureTitle: "Efficient Staff Management for Better Service 👨‍🍳",
-  },
-  {
-    imageSrc: dailyReceiptSystem,
-    quote:
-      "Generate detailed daily receipts to track sales, tips, and revenue for each shift. Waiters can close their receipts and download a PDF summary.<br/>✅ Track Daily Sales – View all orders handled during the shift.<br/>✅ Tip Management – Monitor total tips received per shift.<br/>✅ One-Click PDF Export – Generate and store daily reports easily.",
-    featureName: "Daily Receipt System",
-    featureTitle: "Comprehensive Shift Reports at Your Fingertips 📑",
-  },
-  {
-    imageSrc: productAvailability,
-    quote:
-      "Control which menu items are available for ordering in real-time. Mark items as unavailable, and they will be visible to customers but unselectable.<br/>✅ Real-Time Availability – Update product status instantly.<br/>✅ Customer Transparency – Unavailable items are shown but cannot be ordered.<br/>✅ Easy Inventory Control – Reduce customer disappointment by managing stock efficiently.",
-    featureName: "Product Availability",
-    featureTitle:
-      "Smart Inventory Management for Better Customer Experience 🚀",
-  },
+const featuresImages = [
+  dashboard,
+  qrCodeOrdering,
+  menuManagement,
+  orderManagement,
+  payments,
+  waitersManagement,
+  dailyReceiptSystem,
+  productAvailability,
 ];
 
-export default ({
-  subheading = "",
-  heading = "Features",
-  description = "Discover the powerful features of Order Craft...",
-  textOnLeft = false,
-}) => {
+export default ({ textOnLeft = false }) => {
+  const { language } = useLanguage();
   const [imageSliderRef, setImageSliderRef] = useState(null);
   const [textSliderRef, setTextSliderRef] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const featuresData = getTranslation("FeaturesSection.items", language);
+  const featuresWithImages = featuresData.map((feature, index) => ({
+    ...feature,
+    imageSrc: featuresImages[index],
+  }));
 
   return (
     <Container>
       <Content>
         <HeadingInfo
           tw="text-center lg:hidden"
-          subheading={subheading}
-          heading={heading}
-          description={description}
+          subheading={getTranslation("FeaturesSection.subheading", language)}
+          heading={getTranslation("FeaturesSection.heading", language)}
+          description={getTranslation("FeaturesSection.description", language)}
         />
         <TestimonialsContainer>
           <Testimonials>
@@ -181,12 +135,14 @@ export default ({
                 fade={true}
                 beforeChange={(oldIndex, newIndex) => setCurrentIndex(newIndex)}
               >
-                {feautures.map((testimonial, index) => (
+                {featuresWithImages.map((testimonial, index) => (
                   <ImageAndControlContainer key={index}>
                     <Image
                       imageSrc={testimonial.imageSrc}
                       onClick={() =>
-                        setSelectedImage(feautures[currentIndex].imageSrc)
+                        setSelectedImage(
+                          featuresWithImages[currentIndex].imageSrc
+                        )
                       }
                     />
                     <ControlContainer>
@@ -204,9 +160,15 @@ export default ({
               <TextContainer textOnLeft={textOnLeft}>
                 <HeadingInfo
                   tw="hidden lg:block"
-                  subheading={subheading}
-                  heading={heading}
-                  description={description}
+                  subheading={getTranslation(
+                    "FeaturesSection.subheading",
+                    language
+                  )}
+                  heading={getTranslation("FeaturesSection.heading", language)}
+                  description={getTranslation(
+                    "FeaturesSection.description",
+                    language
+                  )}
                 />
                 <TestimonialTextSlider
                   arrows={false}
@@ -214,13 +176,11 @@ export default ({
                   asNavFor={imageSliderRef}
                   fade={true}
                 >
-                  {feautures.map((testimonial, index) => (
+                  {featuresWithImages.map((testimonial, index) => (
                     <TestimonialText key={index}>
                       <CustomerInfo>
                         <CustomerTextInfo>
-                          <CustomerName>
-                            {testimonial.featureName}
-                          </CustomerName>
+                          <CustomerName>{testimonial.featureName}</CustomerName>
                           <CustomerTitle>
                             {testimonial.featureTitle}
                           </CustomerTitle>
