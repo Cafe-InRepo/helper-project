@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { css } from "styled-components/macro";
+//import { css } from "styled-components/macro";
 import {
   SectionHeading,
   Subheading as SubheadingBase,
